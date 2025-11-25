@@ -14,10 +14,10 @@
             <a href="#" class="logo">Minjong Kim</a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#news" class="nav-link">News</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#photos" class="nav-link">Photos</a></li>
             </ul>
             <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">
                 <span class="sun-icon">☀️</span>
@@ -26,139 +26,116 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Minjong Kim</h1>
-                <p class="subtitle">PhD Researcher in Wearable Robotics & Biomechanics</p>
-                <p class="affiliation">Seoul National University</p>
-                <div class="hero-links">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="Minjong_Kim_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+    <!-- Hero + About Section (Compact First Screen) -->
+    <section id="hero-about">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Minjong Kim" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-circle\'>Photo</div>'">
+                </div>
+                <div class="profile-info">
+                    <h1>Minjong Kim</h1>
+                    <p class="title">PhD Student</p>
+                    <p class="affiliation">Seoul National University</p>
+                    <p class="department">Dept. of Electrical and Computer Engineering</p>
+                    <div class="contact-links">
+                        <a href="mailto:alswhd1111@gmail.com" class="contact-link" title="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            alswhd1111@gmail.com
+                        </a>
+                        <a href="https://github.com/MinjongKim01" target="_blank" rel="noopener" class="contact-link" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/kimminjong/" target="_blank" rel="noopener" class="contact-link" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="Minjong_Kim_CV.pdf" class="contact-link cv-link" download title="Download CV">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            CV
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <!-- Replace with actual profile photo -->
-                    <img src="images/profile.jpg" alt="Minjong Kim" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'>Add Photo<br>images/profile.jpg</div>'">
+
+            <!-- About + Education + Interests (Compact) -->
+            <div class="about-compact">
+                <div class="about-text">
+                    <h2 id="about">About</h2>
+                    <p>
+                        I am a PhD student in the Department of Electrical and Computer Engineering at Seoul National University,
+                        advised by Dr. Jinsoo Kim. I completed my B.S. in Mechanical Engineering at UNIST with a GPA of 4.20/4.30.
+                        My research focuses on enhancing human mobility through advanced wearable robotics and biomechanical analysis.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <strong>Seoul National University</strong>
+                            <span>2026 - Present</span>
+                            <p>PhD, Electrical and Computer Engineering</p>
+                        </div>
+                        <div class="edu-item">
+                            <strong>UNIST</strong>
+                            <span>2020 - 2026</span>
+                            <p>B.S. Mechanical Engineering (GPA: 4.20/4.30)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Research Interests</h3>
+                        <ul class="interests-list">
+                            <li>Lower-limb Wearable Robots</li>
+                            <li>Gait Augmentation</li>
+                            <li>Human-Robot Interaction</li>
+                            <li>Biomechanics</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Awards</h3>
+                        <ul class="awards-compact">
+                            <li>National Scholarship for Science and Technology (2024-Present)</li>
+                            <li>Dean's List (2023, 2024)</li>
+                            <li>UNIST Global Scholarship (2020)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- News Section -->
+    <section id="news">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I am a PhD student in the Department of Electrical and Computer Engineering at Seoul National University,
-                    advised by Dr. Jinsoo Kim. I completed my B.S. in Mechanical Engineering at UNIST with a GPA of 4.20/4.30.
-                </p>
-                <p>
-                    My research focuses on enhancing human mobility through advanced wearable robotics and biomechanical analysis.
-                    I am particularly interested in developing intelligent systems that can adapt to and improve human gait patterns,
-                    with applications ranging from rehabilitation to sports performance enhancement.
-                </p>
-                <div class="education-section">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h4>Seoul National University</h4>
-                            <span class="date">Mar. 2026 - Present</span>
-                        </div>
-                        <p>Integrated PhD in Electrical and Computer Engineering</p>
-                        <p class="advisor">Advisor: Jinsoo Kim, PhD</p>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h4>UNIST (Ulsan National Institute of Science and Technology)</h4>
-                            <span class="date">Mar. 2020 - Feb. 2026</span>
-                        </div>
-                        <p>B.S. in Mechanical Engineering</p>
-                        <p class="gpa">GPA: 4.20/4.30 (In-Major: 4.26/4.30)</p>
-                    </div>
+            <h2 class="section-title">News</h2>
+            <div class="news-list">
+                <!-- Add your news items here -->
+                <div class="news-item">
+                    <span class="news-date">Dec 2024</span>
+                    <p>Started PhD program at Seoul National University</p>
                 </div>
-                <div class="awards-section">
-                    <h3>Awards & Honors</h3>
-                    <ul class="awards-list">
-                        <li>
-                            <strong>National Scholarship for Science and Technology</strong>
-                            <span class="date">Spring 2024 - Present</span>
-                        </li>
-                        <li>
-                            <strong>Dean's List</strong>
-                            <span class="date">Spring 2023, Fall 2024</span>
-                        </li>
-                        <li>
-                            <strong>UNIST Global Scholarship for Exchange Student Program</strong>
-                            <span class="date">2020</span>
-                        </li>
-                    </ul>
+                <div class="news-item">
+                    <span class="news-date">Dec 2024</span>
+                    <p>Joined Wearable Robotics Laboratory as Research Intern</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Interests Section -->
-    <section id="research">
-        <div class="container">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="research-content">
-                <p class="research-description">
-                    My research interests include lower-limb wearable robots, gait augmentation, and human-robot interaction.
-                    I am particularly focused on improving gait performance and generating optimal motion patterns to enhance
-                    human mobility, with long-term applications in sports and performance augmentation.
-                </p>
-                <div class="research-topics">
-                    <div class="topic-card">
-                        <h3>Wearable Robotics</h3>
-                        <p>Designing and developing lower-limb exoskeletons and soft wearable robots for gait assistance and augmentation</p>
-                    </div>
-                    <div class="topic-card">
-                        <h3>Biomechanics</h3>
-                        <p>Analyzing human gait patterns using motion capture systems and developing biomechanical models</p>
-                    </div>
-                    <div class="topic-card">
-                        <h3>Human-Robot Interaction</h3>
-                        <p>Creating intuitive control strategies and optimizing motion patterns for seamless human-robot collaboration</p>
-                    </div>
-                    <div class="topic-card">
-                        <h3>Gait Augmentation</h3>
-                        <p>Developing algorithms to enhance human mobility and performance in sports and daily activities</p>
-                    </div>
+                <div class="news-item">
+                    <span class="news-date">Feb 2026</span>
+                    <p>Completed B.S. in Mechanical Engineering at UNIST</p>
                 </div>
-                <div class="skills-section">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Programming</h4>
-                            <ul>
-                                <li>Python</li>
-                                <li>MATLAB</li>
-                                <li>ROS1</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Software & Tools</h4>
-                            <ul>
-                                <li>CATIA</li>
-                                <li>Fusion360</li>
-                                <li>3D Printing & Laser Cutting</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Biomechanical Equipment</h4>
-                            <ul>
-                                <li>Motion Capture (OptiTrack, Vicon)</li>
-                                <li>Instrumented Treadmill (Bertec)</li>
-                                <li>Force Plates (Zebris)</li>
-                                <li>IMUs</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <!-- Add more news items as needed -->
             </div>
         </div>
     </section>
@@ -166,109 +143,120 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Research Experience</h2>
+            <h2 class="section-title">Projects</h2>
+
+            <!-- Ongoing Projects -->
+            <h3 class="subsection-title">Ongoing</h3>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Wearable Robotics Laboratory</h3>
-                        <span class="date">Dec. 2024 - Present</span>
-                    </div>
-                    <p class="project-role">Undergraduate Research Intern</p>
-                    <p class="project-location">Seoul National University, South Korea</p>
-                    <p class="project-advisor">Advisor: Jinsoo Kim, PhD</p>
-                    <ul class="project-details">
-                        <li>Built a gait analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection</li>
-                        <li>Implemented a real-time IMU-based gait metric and validated results against motion capture-derived reference measures</li>
-                    </ul>
+                    <h4>Gait Analysis Pipeline</h4>
+                    <p class="project-location">Wearable Robotics Laboratory, SNU</p>
+                    <p class="project-description">
+                        Building a gait analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection.
+                        Implementing real-time IMU-based gait metrics validated against motion capture-derived reference measures.
+                    </p>
                     <div class="project-tags">
                         <span class="tag">Motion Capture</span>
                         <span class="tag">Gait Analysis</span>
                         <span class="tag">IMU</span>
-                        <span class="tag">Real-time Processing</span>
                     </div>
                 </div>
+                <!-- Add more ongoing projects here -->
+            </div>
 
+            <!-- Completed Projects -->
+            <h3 class="subsection-title">Completed</h3>
+            <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Ergonomics Laboratory</h3>
-                        <span class="date">Jan. 2024 - Dec. 2024</span>
-                    </div>
-                    <p class="project-role">Undergraduate Research Intern</p>
-                    <p class="project-location">UNIST, Ulsan, South Korea</p>
-                    <p class="project-advisor">Advisor: Gwanseob Shin, PhD</p>
-                    <ul class="project-details">
-                        <li>Developed a predictive model for floor impact noise using gait acceleration features collected from human walking trials</li>
-                        <li>Designed a robotic control algorithm for a shoulder arthroscope based on surgeon head-motion tracking</li>
-                    </ul>
+                    <h4>Floor Impact Noise Prediction Model</h4>
+                    <p class="project-location">Ergonomics Laboratory, UNIST</p>
+                    <p class="project-description">
+                        Developed a predictive model for floor impact noise using gait acceleration features collected from human walking trials.
+                    </p>
                     <div class="project-tags">
-                        <span class="tag">Predictive Modeling</span>
+                        <span class="tag">Machine Learning</span>
                         <span class="tag">Gait Analysis</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h4>Robotic Shoulder Arthroscope Control</h4>
+                    <p class="project-location">Ergonomics Laboratory, UNIST</p>
+                    <p class="project-description">
+                        Designed a robotic control algorithm for a shoulder arthroscope based on surgeon head-motion tracking.
+                    </p>
+                    <div class="project-tags">
                         <span class="tag">Robotic Control</span>
                         <span class="tag">Medical Robotics</span>
                     </div>
                 </div>
+                <!-- Add more completed projects here -->
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications">
+    <!-- Experience Section -->
+    <section id="experience">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-content">
-                <p class="publications-notice">Publications coming soon. Currently working on several research projects.</p>
-                <!-- Uncomment and fill in when you have publications -->
-                <!--
-                <div class="publication-item">
-                    <h3>Paper Title</h3>
-                    <p class="authors">Author1, Author2, <strong>M. Kim</strong>, Author3</p>
-                    <p class="venue">Conference/Journal Name, Year</p>
-                    <div class="publication-links">
-                        <a href="#" class="pub-link">PDF</a>
-                        <a href="#" class="pub-link">Code</a>
-                        <a href="#" class="pub-link">DOI</a>
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Undergraduate Research Intern</h3>
+                            <p class="exp-org">Wearable Robotics Laboratory, Seoul National University</p>
+                            <p class="exp-advisor">Advisor: Jinsoo Kim, PhD</p>
+                        </div>
+                        <span class="exp-date">Dec 2024 - Present</span>
                     </div>
                 </div>
-                -->
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Undergraduate Research Intern</h3>
+                            <p class="exp-org">Ergonomics Laboratory, UNIST</p>
+                            <p class="exp-advisor">Advisor: Gwanseob Shin, PhD</p>
+                        </div>
+                        <span class="exp-date">Jan 2024 - Dec 2024</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Student Council Member</h3>
+                            <p class="exp-org">Mechanical Engineering, UNIST</p>
+                        </div>
+                        <span class="exp-date">Mar 2023 - Jul 2025</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Photos Section -->
+    <section id="photos">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <p>I'm always open to discussing research opportunities, collaborations, or answering questions about my work.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <a href="mailto:alswhd1111@gmail.com">alswhd1111@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <span>010-3441-4364</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🏛️</span>
-                        <span>Seoul National University, Dept. of Electrical and Computer Engineering</span>
-                    </div>
+            <h2 class="section-title">Photos</h2>
+            <div class="photo-grid">
+                <!-- Add your photos here - they will maintain uniform aspect ratio -->
+                <div class="photo-item">
+                    <img src="images/photo1.jpg" alt="Research lab" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 1</div>'">
                 </div>
-                <div class="social-links">
-                    <!-- Add your actual social media links -->
-                    <a href="https://github.com/MinjongKim01" target="_blank" rel="noopener" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/kimminjong/" target="_blank" rel="noopener" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
+                <div class="photo-item">
+                    <img src="images/photo2.jpg" alt="Conference" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 2</div>'">
                 </div>
+                <div class="photo-item">
+                    <img src="images/photo3.jpg" alt="Lab work" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 3</div>'">
+                </div>
+                <div class="photo-item">
+                    <img src="images/photo4.jpg" alt="Team" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 4</div>'">
+                </div>
+                <div class="photo-item">
+                    <img src="images/photo5.jpg" alt="Presentation" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 5</div>'">
+                </div>
+                <div class="photo-item">
+                    <img src="images/photo6.jpg" alt="Equipment" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 6</div>'">
+                </div>
+                <!-- Add more photos as needed -->
             </div>
         </div>
     </section>
