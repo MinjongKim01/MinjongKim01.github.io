@@ -7,5 +7,5 @@ This is my personal homepage.
 ---
 
 Minjong Kim
-PhD Student, Seoul National University
+Incoming integrated MS-PhD student, Seoul National University
 Wearable Robotics & Biomechanics
