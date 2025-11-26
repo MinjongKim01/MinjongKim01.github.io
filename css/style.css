@@ -482,7 +482,9 @@ section:nth-child(even) {
     box-shadow: 0 6px 20px var(--shadow-md);
 }
 
-.project-image {
+/* Project Image Slider */
+.project-slider {
+    position: relative;
     flex-shrink: 0;
     width: 250px;
     height: 180px;
@@ -491,15 +493,101 @@ section:nth-child(even) {
     background: var(--bg-tertiary);
 }
 
-.project-image img {
+.slider-images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slider-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
-.project-item:hover .project-image img {
+.slider-images img.error {
+    display: none;
+}
+
+.project-item:hover .slider-images img {
     transform: scale(1.05);
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.project-slider:hover .slider-btn {
+    opacity: 1;
+}
+
+/* Hide buttons if only one image */
+.project-slider.single-image .slider-btn {
+    display: none;
+}
+
+/* Slider Indicators */
+.slider-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    width: 20px;
+    border-radius: 4px;
+}
+
+/* Hide indicators if only one image */
+.project-slider.single-image .slider-indicators {
+    display: none;
 }
 
 .project-placeholder {
@@ -694,7 +782,7 @@ footer p {
         flex-direction: column;
     }
 
-    .project-image {
+    .project-slider {
         width: 100%;
         height: 200px;
     }
@@ -808,7 +896,7 @@ footer p {
         padding: 1.2rem;
     }
 
-    .project-image {
+    .project-slider {
         height: 180px;
     }
 }

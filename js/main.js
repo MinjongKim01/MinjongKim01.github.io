@@ -268,4 +268,93 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Initialize project image sliders
+    initProjectSliders();
 });
+
+// Project Image Slider Functionality
+function initProjectSliders() {
+    const sliders = document.querySelectorAll('.project-slider');
+
+    sliders.forEach(slider => {
+        const imagesContainer = slider.querySelector('.slider-images');
+        const images = Array.from(imagesContainer.querySelectorAll('img')).filter(img => !img.classList.contains('error'));
+        const prevBtn = slider.querySelector('.slider-btn.prev');
+        const nextBtn = slider.querySelector('.slider-btn.next');
+        const indicatorsContainer = slider.querySelector('.slider-indicators');
+
+        // If only one image or no images, mark as single-image
+        if (images.length <= 1) {
+            slider.classList.add('single-image');
+            return;
+        }
+
+        let currentIndex = 0;
+
+        // Create indicators
+        images.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = indicatorsContainer.querySelectorAll('.indicator');
+
+        // Update slider position
+        function updateSlider() {
+            const offset = -currentIndex * 100;
+            imagesContainer.style.transform = `translateX(${offset}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        // Next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlider();
+        }
+
+        // Previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlider();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+        });
+
+        // Optional: Keyboard navigation when slider is hovered
+        slider.addEventListener('mouseenter', () => {
+            slider.setAttribute('tabindex', '0');
+            slider.focus();
+        });
+
+        slider.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+    });
+}
