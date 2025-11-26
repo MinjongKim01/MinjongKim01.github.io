@@ -487,7 +487,7 @@ section:nth-child(even) {
     position: relative;
     flex-shrink: 0;
     width: 250px;
-    height: 180px;
+    aspect-ratio: 4/3;
     border-radius: 8px;
     overflow: hidden;
     background: var(--bg-tertiary);
@@ -784,7 +784,6 @@ footer p {
 
     .project-slider {
         width: 100%;
-        height: 200px;
     }
 
     .photo-grid {
@@ -894,10 +893,6 @@ footer p {
 
     .project-item {
         padding: 1.2rem;
-    }
-
-    .project-slider {
-        height: 180px;
     }
 }
 
