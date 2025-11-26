@@ -279,12 +279,51 @@ function initProjectSliders() {
 
     sliders.forEach(slider => {
         const imagesContainer = slider.querySelector('.slider-images');
-        const images = Array.from(imagesContainer.querySelectorAll('img')).filter(img => !img.classList.contains('error'));
+        const allImages = imagesContainer.querySelectorAll('img');
+
+        // Check if any images actually loaded successfully
+        let validImages = [];
+
+        allImages.forEach(img => {
+            // Add error handler to hide slider if image fails to load
+            img.addEventListener('error', function() {
+                this.classList.add('error');
+                // Check if all images failed - if so, hide the entire slider
+                const allImagesInSlider = Array.from(imagesContainer.querySelectorAll('img'));
+                const allFailed = allImagesInSlider.every(image => image.classList.contains('error') || image.complete && image.naturalWidth === 0);
+
+                if (allFailed) {
+                    slider.style.display = 'none';
+                }
+            });
+
+            // Check if image is already loaded and valid
+            if (img.complete) {
+                if (img.naturalWidth === 0) {
+                    img.classList.add('error');
+                } else {
+                    validImages.push(img);
+                }
+            } else {
+                // If not loaded yet, assume it might be valid
+                validImages.push(img);
+            }
+        });
+
+        // Filter out error images
+        const images = Array.from(allImages).filter(img => !img.classList.contains('error'));
+
+        // If no valid images, hide the slider
+        if (images.length === 0) {
+            slider.style.display = 'none';
+            return;
+        }
+
         const prevBtn = slider.querySelector('.slider-btn.prev');
         const nextBtn = slider.querySelector('.slider-btn.next');
         const indicatorsContainer = slider.querySelector('.slider-indicators');
 
-        // If only one image or no images, mark as single-image
+        // If only one image, mark as single-image
         if (images.length <= 1) {
             slider.classList.add('single-image');
             return;
