@@ -215,5 +215,57 @@ style.textContent = `
     .scroll-to-top:hover {
         background: var(--accent-hover) !important;
     }
+
+    .project-item.hidden {
+        display: none;
+    }
 `;
 document.head.appendChild(style);
+
+// Project Tabs Filtering
+document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Get filter value
+            const filter = button.getAttribute('data-filter');
+
+            // Filter projects
+            projectItems.forEach(item => {
+                const status = item.getAttribute('data-status');
+
+                if (filter === 'all') {
+                    item.classList.remove('hidden');
+                    item.style.display = 'flex';
+                } else if (status === filter) {
+                    item.classList.remove('hidden');
+                    item.style.display = 'flex';
+                } else {
+                    item.classList.add('hidden');
+                    item.style.display = 'none';
+                }
+            });
+
+            // Add fade-in animation to visible projects
+            const visibleProjects = document.querySelectorAll('.project-item:not(.hidden)');
+            visibleProjects.forEach((project, index) => {
+                project.style.opacity = '0';
+                project.style.transform = 'translateX(-20px)';
+
+                setTimeout(() => {
+                    project.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    project.style.opacity = '1';
+                    project.style.transform = 'translateX(0)';
+                }, index * 100);
+            });
+        });
+    });
+});

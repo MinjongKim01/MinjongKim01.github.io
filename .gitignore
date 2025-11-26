@@ -37,3 +37,5 @@ $RECYCLE.BIN/
 
 # Optional: Uncomment if you want to exclude your CV from git
 # *.pdf
+
+.claude/

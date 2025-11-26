@@ -145,51 +145,74 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
-            <!-- Ongoing Projects -->
-            <h3 class="subsection-title">Ongoing</h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>Gait Analysis Pipeline</h4>
-                    <p class="project-location">Wearable Robotics Laboratory, SNU</p>
-                    <p class="project-description">
-                        Building a gait analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection.
-                        Implementing real-time IMU-based gait metrics validated against motion capture-derived reference measures.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Motion Capture</span>
-                        <span class="tag">Gait Analysis</span>
-                        <span class="tag">IMU</span>
-                    </div>
-                </div>
-                <!-- Add more ongoing projects here -->
+            <!-- Tab Buttons -->
+            <div class="project-tabs">
+                <button class="tab-btn active" data-filter="all">All</button>
+                <button class="tab-btn" data-filter="ongoing">Ongoing</button>
+                <button class="tab-btn" data-filter="completed">Completed</button>
             </div>
 
-            <!-- Completed Projects -->
-            <h3 class="subsection-title">Completed</h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>Floor Impact Noise Prediction Model</h4>
-                    <p class="project-location">Ergonomics Laboratory, UNIST</p>
-                    <p class="project-description">
-                        Developed a predictive model for floor impact noise using gait acceleration features collected from human walking trials.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Gait Analysis</span>
+            <!-- Projects List -->
+            <div class="projects-list">
+                <!-- Ongoing Project 1 -->
+                <div class="project-item" data-status="ongoing">
+                    <div class="project-image">
+                        <img src="images/project-gait.jpg" alt="Gait Analysis Pipeline" onerror="this.parentElement.innerHTML='<div class=\'project-placeholder\'>Project Image</div>'">
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Gait Analysis Pipeline</h4>
+                        <p class="project-period">Dec 2024 - Present</p>
+                        <p class="project-role">Role: Lead Researcher</p>
+                        <p class="project-description">
+                            Building a gait analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection.
+                            Implementing real-time IMU-based gait metrics validated against motion capture-derived reference measures.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Motion Capture</span>
+                            <span class="tag">Gait Analysis</span>
+                            <span class="tag">IMU</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h4>Robotic Shoulder Arthroscope Control</h4>
-                    <p class="project-location">Ergonomics Laboratory, UNIST</p>
-                    <p class="project-description">
-                        Designed a robotic control algorithm for a shoulder arthroscope based on surgeon head-motion tracking.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Robotic Control</span>
-                        <span class="tag">Medical Robotics</span>
+
+                <!-- Completed Project 1 -->
+                <div class="project-item" data-status="completed">
+                    <div class="project-image">
+                        <img src="images/project-noise.jpg" alt="Floor Impact Noise Prediction" onerror="this.parentElement.innerHTML='<div class=\'project-placeholder\'>Project Image</div>'">
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Floor Impact Noise Prediction Model</h4>
+                        <p class="project-period">Jan 2024 - Dec 2024</p>
+                        <p class="project-role">Role: Research Intern</p>
+                        <p class="project-description">
+                            Developed a predictive model for floor impact noise using gait acceleration features collected from human walking trials.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Gait Analysis</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Add more completed projects here -->
+
+                <!-- Completed Project 2 -->
+                <div class="project-item" data-status="completed">
+                    <div class="project-image">
+                        <img src="images/project-arthroscope.jpg" alt="Robotic Shoulder Arthroscope" onerror="this.parentElement.innerHTML='<div class=\'project-placeholder\'>Project Image</div>'">
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Robotic Shoulder Arthroscope Control</h4>
+                        <p class="project-period">Mar 2024 - Aug 2024</p>
+                        <p class="project-role">Role: Research Intern</p>
+                        <p class="project-description">
+                            Designed a robotic control algorithm for a shoulder arthroscope based on surgeon head-motion tracking.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Robotic Control</span>
+                            <span class="tag">Medical Robotics</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
             </div>
         </div>
     </section>
