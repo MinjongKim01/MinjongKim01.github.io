@@ -1,336 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minjong Kim - Researcher in Wearable Robotics and Biomechanics">
-    <title>Minjong Kim - Researcher</title>
+    <title>Minjong Kim | Researcher</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Minjong Kim</a>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#photos" class="nav-link">Photos</a></li>
-            </ul>
-            <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">
-                <span class="sun-icon">☀️</span>
-                <span class="moon-icon">🌙</span>
-            </button>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">WELCOME<span class="dot">!</span></a>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#honors">Honors & Awards</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero + About Section (Compact First Screen) -->
-    <section id="hero-about">
+    <!-- Intro / About Section -->
+    <section id="about" class="intro-section">
         <div class="container">
-            <!-- Profile Header -->
-            <div class="profile-header">
-                <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Minjong Kim" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-circle\'>Photo</div>'">
+            <!-- Top Row: About Text & Photo -->
+            <div class="intro-main">
+                <div class="intro-text">
+                    <h1 class="name-title">Minjong Kim</h1>
+                    <p class="role-subtitle">Researcher in Wearable Robotics & Biomechanics</p>
+
+                    <div class="bio-content">
+                        <p>
+                            Hello👋 I'm a B.S. student in Mechanical Engineering at UNIST. I explore the intersection of
+                            wearable robotics and human movement to create technologies
+                            that assist people.
+                        </p>
+                        <p>
+                            Starting March 2026, I will start my integrated MS-PhD program at the Wearable Robotics Lab
+                            at Seoul National University. My goal is enhancing human mobility & performance through wearable
+                            robotics and biomechanical analysis.
+                        </p>
+                    </div>
+
+                    <!-- Interests Tags -->
+                    <div class="interests-area">
+                        <span class="interest-label">Interests</span>
+                        <div class="tag-cloud">
+                            <span class="tag">Wearable Robots</span>
+                            <span class="tag">Gait Analysis</span>
+                            <span class="tag">Biomechanics</span>
+                            <span class="tag">Human Performance</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <h1>Minjong Kim</h1>
-                    <p class="title">B.S. Student</p>
-                    <p class="affiliation">Ulsan National Institute of Science and Technology (UNIST)</p>
-                    <p class="department">Dept. of Mechanical Engineering</p>
-                    <div class="contact-links">
-                        <a href="mailto:minjong.kim@snu.ac.kr" class="contact-link" title="Email">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            minjong.kim@snu.ac.kr
-                        </a>
-                        <a href="https://github.com/MinjongKim01" target="_blank" rel="noopener" class="contact-link" title="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/kimminjong/" target="_blank" rel="noopener" class="contact-link" title="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                            LinkedIn
-                        </a>
-                        <a href="Minjong_Kim_CV.pdf" class="contact-link cv-link" download title="Download CV">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                            </svg>
-                            CV
-                        </a>
+
+                <div class="intro-visual">
+                    <div class="intro-image-wrapper">
+                        <img src="images/profile.jpg" alt="Minjong Kim" class="profile-img-clean"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                        <div class="fallback-initials-clean">MK</div>
+                    </div>
+
+                    <!-- Social Actions -->
+                    <div class="social-actions">
+                        <a href="#projects" class="action-btn project-btn">View Projects</a>
+                        <div class="icon-group">
+                            <a href="https://github.com/MinjongKim01" target="_blank" class="icon-btn"
+                                aria-label="GitHub" data-tooltip="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kimminjong/" target="_blank" class="icon-btn"
+                                aria-label="LinkedIn" data-tooltip="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="mailto:minjong.kim@snu.ac.kr" class="icon-btn"
+                                aria-label="Email" data-tooltip="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                            <a href="Minjong_Kim_CV.pdf" target="_blank" class="icon-btn"
+                                aria-label="Download CV" data-tooltip="CV">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="12" y1="18" x2="12" y2="12"></line>
+                                    <line x1="9" y1="15" x2="15" y2="15"></line>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- About + Education + Interests (Compact) -->
-            <div class="about-compact">
-                <div class="about-text">
-                    <h2 id="about">About</h2>
-                    <p>
-                        I am a B.S. student in the Department of Mechanical Engineering at Ulsan National Institute of Science and Technology (UNIST),
-                        and will begin a combined master's-PhD program at SNU's Wearable Robotics Lab (advisor: Dr. Jinsoo Kim) starting March 2026. 
-                        My research focuses on enhancing human mobility through advanced wearable robotics and biomechanical analysis.
-                    </p>
-                </div>
-
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Education</h3>
-                        <div class="edu-item">
-                            <strong>Seoul National University</strong>
-                            <span>Incoming (Mar 2026)</span>
-                            <p>PhD, Electrical and Computer Engineering</p>
+            <!-- Bottom Row: Education & News -->
+            <div class="intro-details-split">
+                <!-- Education Column -->
+                <div class="detail-col education-col">
+                    <h3 class="detail-title">Education</h3>
+                    <div class="education-list-vertical">
+                        <div class="edu-item-vertical">
+                            <div class="edu-header">
+                                <strong>Seoul National University</strong>
+                                <span class="edu-period">Incoming</span>
+                            </div>
+                            <ul class="edu-details">
+                                <li>Integrated MS-PhD Student</li>
+                                <li>Dept. ofElectrical & Computer Engineering</li>
+                            </ul>
                         </div>
-                        <div class="edu-item">
-                            <strong>UNIST</strong>
-                            <span>Mar 2020 - Feb 2026 Expected</span>
-                            <p>B.S. Mechanical Engineering (GPA: 4.20/4.30)</p>
+                        <div class="edu-item-vertical">
+                            <div class="edu-header">
+                                <strong>UNIST</strong>
+                                <span class="edu-period">Mar 2020 - Feb 2026</span>
+                            </div>
+                            <ul class="edu-details">
+                                <li>B.S. Student</li>
+                                <li>Dept. of Mechanical Engineering</li>
+                                <li>GPA: 4.20 / 4.30</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="info-card">
-                        <h3>Research Interests</h3>
-                        <ul class="interests-list">
-                            <li>Lower-limb Wearable Robots</li>
-                            <li>Gait Analysis</li>
-                            <li>Biomechanics</li>
-                            <li>Human Augmentation</li>
-                        </ul>
+                <!-- News Column (Scrollable) -->
+                <div class="detail-col news-col">
+                    <h3 class="detail-title">Latest News</h3>
+                    <div class="news-wrapper">
+                        <div class="news-scroll-container" id="news-scroll">
+                            <div class="news-row">
+                                <span class="news-date-mono">Dec 2024</span>
+                                <span class="news-text">I joined Wearable Robotics Lab at SNU!</span>
+                            </div>
+                            <div class="news-row">
+                                <span class="news-date-mono">May 2024</span>
+                                <span class="news-text">I attended KSNVE 2024 Fall Conference in Jeju!</span>
+                            </div>
+                            <div class="news-row">
+                                <span class="news-date-mono">Jan 2024</span>
+                                <span class="news-text">I joined Ergonomics Laboratory at UNIST!</span>
+                            </div>
+                        </div>
+                        <!-- Scroll Hint Overlays -->
+                        <div class="scroll-hint-top" id="scroll-hint-top">
+                            <div class="scroll-arrow-up">↑</div>
+                        </div>
+                        <div class="scroll-hint" id="scroll-hint-bottom">
+                            <div class="scroll-arrow">↓</div>
+                        </div>
                     </div>
-
-                    <div class="info-card">
-                        <h3>Awards</h3>
-                        <ul class="awards-compact">
-                            <li>National Scholarship for Science and Technology (2024-Present)</li>
-                            <li>Dean's List (2023, 2024)</li>
-                            <li>UNIST Global Scholarship (2020)</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news">
-        <div class="container">
-            <h2 class="section-title">News</h2>
-            <div class="news-list">
-                <!-- Add your news items here -->
-                <div class="news-item">
-                    <span class="news-date">Dec 2024</span>
-                    <p>Joined Wearable Robotics Laboratory as Research Intern</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">May 2024</span>
-                    <p>Attended KSNVE 2024 Fall Conference in Jeju, Korea!</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">Jan 2024</span>
-                    <p>Joined Ergonomics Laboratory at UNIST as Research Intern!</p>
-                </div>
-                <!-- Add more news items as needed -->
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-
-            <!-- Tab Buttons -->
-            <div class="project-tabs">
-                <button class="tab-btn active" data-filter="all">All</button>
-                <button class="tab-btn" data-filter="ongoing">Ongoing</button>
-                <button class="tab-btn" data-filter="completed">Completed</button>
+            <div class="section-header-row">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
             </div>
 
-            <!-- Projects List -->
-            <div class="projects-list">
-                <!-- Ongoing Project 1 -->
-                <div class="project-item" data-status="ongoing">
-                    <div class="project-slider">
-                        <div class="slider-images">
-                            <img src="images/project-gait.jpg" alt="Gait Analysis Pipeline">
-                            <!-- 여러 이미지를 추가하려면 아래와 같이 추가하세요:
-                            <img src="images/project-gait-2.jpg" alt="Gait Analysis Pipeline 2">
-                            <img src="images/project-gait-3.jpg" alt="Gait Analysis Pipeline 3">
-                            -->
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous image">&lt;</button>
-                        <button class="slider-btn next" aria-label="Next image">&gt;</button>
-                        <div class="slider-indicators"></div>
+            <div class="projects-list-view">
+                <!-- Project 1 -->
+                <article class="project-row" data-status="ongoing">
+                    <div class="project-row-img">
+                        <span class="status-badge-small">Ongoing</span>
+                        <img src="images/project-foot_clearance.png" alt="Foot Clearance Analysis"
+                            onerror="this.style.display='none'; this.parentElement.parentElement.classList.add('no-image');">
+                        <div class="project-fallback-row">Foot Clearance Validation</div>
                     </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Gait Analysis Pipeline</h4>
-                        <p class="project-period">Dec 2024 - Present</p>
-                        <p class="project-role">Role: Lead Researcher</p>
-                        <p class="project-description">
-                            Building a gait analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection.
-                            Implementing real-time IMU-based gait metrics validated against motion capture-derived reference measures.
+                    <div class="project-row-content">
+                        <div class="project-row-header">
+                            <h3>Foot Clearance Analysis</h3>
+                            <span class="project-period">Nov 2025 - Present</span>
+                        </div>
+                        <p class="project-meta"><strong>Role:</strong> Lead Researcher</p>
+                        <p class="project-desc-row">
+                            Analyze general foot clearance definition and its impact on gait and mobility. And validate its
+                            measurement method using motion capture and IMU data.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">Motion Capture</span>
-                            <span class="tag">Gait Analysis</span>
-                            <span class="tag">IMU</span>
+                        <div class="tag-cloud-small">
+                            <span class="tag-small">MoCap</span>
+                            <span class="tag-small">Python</span>
+                            <span class="tag-small">Biomechanics</span>
                         </div>
+                        <a href="#" class="project-github-link private">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Completed Project 3 -->
-                <div class="project-item" data-status="completed">
-                    <div class="project-slider">
-                        <div class="slider-images">
-                            <img src="images/project-imu_demo1.png" alt="real-time imu gait metrics demo1">
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous image">&lt;</button>
-                        <button class="slider-btn next" aria-label="Next image">&gt;</button>
-                        <div class="slider-indicators"></div>
+                <!-- Project 2 -->
+                <article class="project-row" data-status="completed">
+                    <div class="project-row-img">
+                        <span class="status-badge-small completed">Completed</span>
+                        <img src="images/project-imu_demo1.png" alt="IMU Demo"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <div class="project-fallback-row">IMU Demo</div>
                     </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Real-time IMU Gait Metrics Demo</h4>
-                        <p class="project-period">Nov 2025</p>
-                        <p class="project-role">Role: Developer</p>
-                        <p class="project-description">
-                            Developed a real-time IMU gait metrics analysis system using xsens DOT sensor.
+                    <div class="project-row-content">
+                        <div class="project-row-header">
+                            <h3>Real-time IMU Gait Metrics</h3>
+                            <span class="project-period">Nov 2025</span>
+                        </div>
+                        <p class="project-meta"><strong>Role:</strong> Developer</p>
+                        <p class="project-desc-row">
+                            Implemented a real-time system for analyzing gait metrics using xsens DOT sensors.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">IMU</span>
-                            <span class="tag">Real-time Processing</span>
+                        <div class="tag-cloud-small">
+                            <span class="tag-small">IMU</span>
+                            <span class="tag-small">Real-time Processing</span>
+                            <span class="tag-small">Gait Analysis</span>
                         </div>
+                        <a href="https://github.com/MinjongKim01/Real-Time_IMU_Gait_Metric" target="_blank" class="project-github-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Completed Project 2 -->
-                <div class="project-item" data-status="completed">
-                    <div class="project-slider">
-                        <div class="slider-images">
-                            <img src="images/project-moga1.png" alt="mocap gait analysis">
-                            <img src="images/project-moga2.png" alt="mocap gait analysis 2">
-                            <img src="images/project-moga3.png" alt="mocap gait analysis 3">
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous image">&lt;</button>
-                        <button class="slider-btn next" aria-label="Next image">&gt;</button>
-                        <div class="slider-indicators"></div>
+                <!-- Project 3 -->
+                <article class="project-row" data-status="completed">
+                    <div class="project-row-img">
+                        <span class="status-badge-small completed">Completed</span>
+                        <img src="images/project-moga1.png" alt="MoCap Analysis 1"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <img src="images/project-moga2.png" alt="MoCap Analysis 2"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <img src="images/project-moga3.png" alt="MoCap Analysis 3"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <div class="project-fallback-row">MoCap Analysis</div>
                     </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Motion Capture Gait Event Detection and Analysis</h4>
-                        <p class="project-period">Jan 2025 - Feb 2025</p>
-                        <p class="project-role">Role: Lead Researcher</p>
-                        <p class="project-description">
-                            Developed a gait event detection and analysis pipeline using motion capture data, enabling kinematic extraction and gait event detection.
+                    <div class="project-row-content">
+                        <div class="project-row-header">
+                            <h3>Motion Capture Gait Analysis</h3>
+                            <span class="project-period">Jan 2025 - Feb 2025</span>
+                        </div>
+                        <p class="project-meta"><strong>Role:</strong> Lead Researcher</p>
+                        <p class="project-desc-row">
+                            Implemented system for automatic detection of gait events (heel-strike, toe-off) and 
+                            gait analysis from motion capture data. Various gait spatio-temporal parameters were calculated.
+                            
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">Motion Capture</span>
-                            <span class="tag">Gait Analysis</span>
+                        <div class="tag-cloud-small">
+                            <span class="tag-small">Motion Capture</span>
+                            <span class="tag-small">Biomechanics</span>
+                            <span class="tag-small">Gait Analysis</span>
                         </div>
+                        <a href="#" class="project-github-link private">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Completed Project 1 -->
-                <div class="project-item" data-status="completed">
-                    <div class="project-slider">
-                        <div class="slider-images">
-                            <img src="images/project-BTS1.png" alt="Robotic Shoulder Arthroscope">
-                            <img src="images/project-BTS2.png" alt="Robotic Shoulder Arthroscope 2">
-
+                <!-- Project 4 -->
+                <article class="project-row" data-status="completed">
+                    <div class="project-row-img">
+                        <span class="status-badge-small completed">Completed</span>
+                        <img src="images/project-BTS1.png" alt="Robotic Control 1"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <img src="images/project-BTS2.png" alt="Robotic Control 2"
+                            onerror="this.style.display='none'; checkAllImagesFailed(this);">
+                        <div class="project-fallback-row">Robotic Control</div>
+                    </div>
+                    <div class="project-row-content">
+                        <div class="project-row-header">
+                            <h3>Robotic Shoulder Arthroscope</h3>
+                            <span class="project-period">Mar 2024 - Aug 2024</span>
                         </div>
-                        <button class="slider-btn prev" aria-label="Previous image">&lt;</button>
-                        <button class="slider-btn next" aria-label="Next image">&gt;</button>
-                        <div class="slider-indicators"></div>
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Robotic Shoulder Arthroscope Control</h4>
-                        <p class="project-period">Mar 2024 - Aug 2024</p>
-                        <p class="project-role">Role: Robot Control</p>
-                        <p class="project-description">
-                            Designed a robotic control algorithm for a shoulder arthroscope based on surgeon head-motion tracking.
+                        <p class="project-meta"><strong>Role:</strong> Robot Control</p>
+                        <p class="project-desc-row">
+                            Designed control algorithms for a robotic shoulder arthroscope based on head-motion
+                            tracking. Utilized inverse kinematics to map head movements to robot end-effector position.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">Robotic Control</span>
-                            <span class="tag">Real-time Processing</span>
-                            <span class="tag">Medical Robotics</span>
+                        <div class="tag-cloud-small">
+                            <span class="tag-small">Robotic Control</span>
+                            <span class="tag-small">Real-time Processing</span>
+                            <span class="tag-small">Medical Robotics</span>
                         </div>
+                        <a href="#" class="project-github-link private">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
                     </div>
-                </div>
-                <!-- Add more projects as needed -->
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
+    <!-- Experience Section (Vertical Stack) -->
+    <section id="experience" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div>
-                            <h3>Undergraduate Research Intern</h3>
-                            <p class="exp-org">Wearable Robotics Laboratory, Seoul National University</p>
-                            <p class="exp-advisor">Advisor: Jinsoo Kim, PhD</p>
+
+            <div class="experience-stack">
+                <!-- Research Category -->
+                <div class="exp-category-box">
+                    <h3 class="category-title">Research</h3>
+                    <div class="exp-list-clean">
+                        <div class="exp-item-clean">
+                            <div class="exp-top">
+                                <span class="exp-role">Undergraduate Research Intern @ Wearable Robotics Lab, SNU</span>
+                                <span class="exp-date">Dec 2024 - Present</span>
+                            </div>
+                            <p class="exp-details">Advisor: Prof. Jinsoo Kim</p>
                         </div>
-                        <span class="exp-date">Dec 2024 - Present</span>
+                        <div class="exp-item-clean">
+                            <div class="exp-top">
+                                <span class="exp-role">Undergraduate Research Intern @ Ergonomics Laboratory, UNIST</span>
+                                <span class="exp-date">Jan 2024 - Dec 2024</span>
+                            </div>
+                            <p class="exp-details">Advisor: Prof. Gwanseob Shin</p>
+                        </div>
                     </div>
                 </div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div>
-                            <h3>Undergraduate Research Intern</h3>
-                            <p class="exp-org">Ergonomics Laboratory, UNIST</p>
-                            <p class="exp-advisor">Advisor: Gwanseob Shin, PhD</p>
+
+                <!-- Teaching Category -->
+                <div class="exp-category-box">
+                    <h3 class="category-title">Other Activities</h3>
+                    <div class="exp-list-clean">
+                        <div class="exp-item-clean">
+                            <div class="exp-top">
+                                <span class="exp-role">Academic Tutor for Local Youth @ Yaksa Middle School, Ulsan</span>
+                                <span class="exp-date">Mar 2025 - July 2025</span>
+                            </div>
                         </div>
-                        <span class="exp-date">Jan 2024 - Dec 2024</span>
+                        <div class="exp-item-clean">
+                            <div class="exp-top">
+                                <span class="exp-role">Student Council Member @ Mechanical Engineering Department, UNIST</span>
+                                <span class="exp-date">Mar 2023 - Jun 2025</span>
+                            </div>
+                        </div>
+                        <div class="exp-item-clean">
+                            <div class="exp-top">
+                                <span class="exp-role">Youth Development Support Staff @ Mosirae Youth Center, Chungju</span>
+                                <span class="exp-date">Mar 2021 - Dec 2022</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Photos Section -->
-    <section id="photos">
+    <!-- Honors & Awards Section -->
+    <section id="honors" class="section">
         <div class="container">
-            <h2 class="section-title">Photos</h2>
-            <div class="photo-grid">
-                <!-- Add your photos here - they will maintain uniform aspect ratio -->
-                <div class="photo-item">
-                    <img src="images/photo1.jpg" alt="Research lab" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 1</div>'">
-                </div>
-                <div class="photo-item">
-                    <img src="images/photo2.jpg" alt="Conference" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 2</div>'">
-                </div>
-                <div class="photo-item">
-                    <img src="images/photo3.jpg" alt="Lab work" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 3</div>'">
-                </div>
-                <div class="photo-item">
-                    <img src="images/photo4.jpg" alt="Team" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 4</div>'">
-                </div>
-                <div class="photo-item">
-                    <img src="images/photo5.jpg" alt="Presentation" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 5</div>'">
-                </div>
-                <div class="photo-item">
-                    <img src="images/photo6.jpg" alt="Equipment" onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Photo 6</div>'">
-                </div>
-                <!-- Add more photos as needed -->
-            </div>
+            <h2 class="section-title">Honors & Awards</h2>
+            <ul class="honors-list">
+                <li class="honor-item">
+                    <span class="honor-year">2024 - present</span>
+                    <div class="honor-content">
+                        <strong>National Scholarship for Science and Engineering</strong>Full tuition scholarship for two years by Korea Student Aid Foundation (KOSAF)
+                    </div>
+                </li>
+                <li class="honor-item">
+                    <span class="honor-year">2024 Fall</span>
+                    <div class="honor-content">
+                        <strong>Dean's List </strong>Top 3% of the college, College of Engineering, UNIST
+                    </div>
+                </li>
+                <li class="honor-item">
+                    <span class="honor-year">2023 Spring</span>
+                    <div class="honor-content">
+                        <strong>Dean's List </strong>Top 3% of the college, College of Engineering, UNIST
+                    </div>
+                </li>
+                <li class="honor-item">
+                    <span class="honor-year">2020 - present</span>
+                    <div class="honor-content">
+                        <strong>UNIST Scholarship</strong>Full tuition scholarship until graduation by UNIST
+                    </div>
+                </li>
+                <li class="honor-item">
+                    <span class="honor-year">2019</span>
+                    <div class="honor-content">
+                        <strong>KAIST Presidential Award</strong>2nd Award for 2019 CanSat Competition, hosted by Korea Aerospace Research Institute (KARI)
+                    </div>
+                </li>
+                <li class="honor-item">
+                    <span class="honor-year">2019</span>
+                    <div class="honor-content">
+                        <strong>Minister of Environment Award</strong>1st Award for 2019 Design Thinking Hackathon, hosted by Dajeon Education & Science Research Institute
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Minjong Kim. All rights reserved.</p>
-            <p>Last updated: November 2025</p>
+            <div class="footer-content-center">
+                <p>&copy; 2025 Minjong Kim. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
