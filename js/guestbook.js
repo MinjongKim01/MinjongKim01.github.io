@@ -38,10 +38,15 @@ async function saveMessage() {
             message: content,
             timestamp: new Date() // 서버 시간이 아닌 로컬 시간 기준 (간편함)
         });
+
+        emailjs.send("service_hfspbfg", "template_x2x12uq", {
+            from_name: name,    // 템플릿의 {{from_name}}에 들어감
+            message: content    // 템플릿의 {{message}}에 들어감
+        });
         
         // 입력창 비우기
         contentInput.value = '';
-        alert("방명록이 등록되었습니다! 🎉");
+        alert("방명록이 등록되었습니다! (주인장에게 알림이 전송되었습니다.)");
     } catch (e) {
         console.error("Error adding document: ", e);
         alert("등록 중 오류가 발생했습니다.");
