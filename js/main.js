@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectFilters();
     initNewsScrollHints();
     initProjectImageSliders();
+    initGuestbookModal();
 });
 
 /* -------------------------------------------------------------------------- */
@@ -302,4 +303,44 @@ function initRevealAnimations() {
         }
     `;
     document.head.appendChild(style);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Guestbook Modal                                 */
+/* -------------------------------------------------------------------------- */
+function initGuestbookModal() {
+    const modal = document.getElementById('guestbook-modal');
+    const openBtn = document.getElementById('guestbook-btn');
+    const closeBtn = document.getElementById('modal-close');
+
+    if (!modal || !openBtn || !closeBtn) return;
+
+    // Open modal
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close when clicking outside modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 }
